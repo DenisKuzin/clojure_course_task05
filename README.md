@@ -4,7 +4,7 @@ web-приложение на Clojure с использованием ajax
 
 Ссылка: http://clojure-deniskuzin.rhcloud.com/timeit
 
-Для работы frontend'е используется jayq, enfocus. Ajax-запросы отсылаются через goog.net.XhrIo
+Для работы frontend'а используется jayq, enfocus. Ajax-запросы отсылаются через goog.net.XhrIo
 
 Измеряет время, затраченное на выполнения выражения на clojure.
 
