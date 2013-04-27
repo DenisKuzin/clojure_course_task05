@@ -33,6 +33,3 @@
               (l/content
                (for [solution solutions]
                  (solution-frag solution)))))
-
-(defn show-add-problem []
-  (l/document (template "timeit_add_problem")))

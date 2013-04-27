@@ -1,7 +1,7 @@
 (ns clojure_course_task05.test.handler
   (:use clojure.test
         ring.mock.request  
-        clojure_course_task05.handler))
+        clj.handler))
 
 (deftest test-app
   (testing "main route"

@@ -18,8 +18,11 @@
     <!--[if lt IE 9]>
       <script src="/html5shiv.js"></script>
     <![endif]-->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
   </head>
   <body>
+    <script type="text/javascript" src="/js/main.js"></script>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -59,11 +62,35 @@
 	</div>
 	<div class="form-actions">
 	  <button type="submit" class="btn btn-primary"><i class="icon-time icon-white"></i> Bench</button>
-	  <a class="btn" href="/timeit-add-problem"><i class="icon-plus"></i> Add problem</a>
+	  <a class="btn" href="#" id="ShowAddModal"><i class="icon-plus"></i> Add problem</a>
 	</div>
 	<div id="results">
 	</div>
       </form>
+    </div>
+    <div class="modal hide fade" id="AddProblemModal">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	<h3>Add problem</h3>
+      </div>
+      <div class="modal-body">
+	<div class="control-group">
+	  <label class="control-label" for="inputProblemModal">Name for problem</label>
+	  <div class="controls">
+	    <input type="text" id="inputProblemModal" name="nameModal" placeholder="2+2">
+	  </div>
+	</div>
+	<div class="control-group">
+	  <label class="control-label" for="inputDescriptionModal">More detailed description</label>
+	  <div class="controls">
+	    <textarea rows="3" id="inputDescriptionModal" name="descriptionModal" placeholder="Counting 2 + 2"></textarea>
+	  </div>
+	</div>
+      </div>
+      <div class="modal-footer">
+	<a href="#" class="btn" data-dismiss="modal">Close</>
+	<a href="#" class="btn btn-primary" id="AjaxAddProblem">Add problem</a>
+      </div>
     </div>
   </body>
 </html>
