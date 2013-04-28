@@ -11,7 +11,7 @@
 
 (l/defragment solution-frag "<h3></h3><div class=\"expression\"></div><div class=\"result\"></div>" [{:keys [problem expression result]}]
   (l/element= :h3) (l/content problem)
-  (l/class= "expression") (l/content expression)
+  (l/class= "expression") (l/content (l/unescaped (str "<pre class=\"brush: Clojure\">" expression "</pre>")))
   (l/class= "result") (l/content result))
 
 (defn show-root []
